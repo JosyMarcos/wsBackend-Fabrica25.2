@@ -1,0 +1,7 @@
+<h1>Lista de Filmes</h1>
+<a href="{% url 'cria_filme' %}">Adicionar Novo Filme</a>
+<ul>
+    {% for filme in filmes %}
+        <li>{{ filme.titulo }} - <a href="{% url 'edita_filme' filme.id %}">Editar</a> | <a href="{% url 'deleta_filme' filme.id %}">Deletar</a></li>
+    {% endfor %}
+</ul>

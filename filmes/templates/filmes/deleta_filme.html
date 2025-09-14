@@ -1,0 +1,6 @@
+<h1>Deletar Filme</h1>
+<p>Tem certeza que deseja excluir o filme "{{ filme.titulo }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Deletar</button>
+</form>
